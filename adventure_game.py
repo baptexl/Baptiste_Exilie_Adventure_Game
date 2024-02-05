@@ -1,4 +1,4 @@
-import time  # Import the time module for a better user experience
+import time
 
 def print_with_pause(text, pause_time=1.5):
     print(text)
@@ -60,10 +60,50 @@ def zombie_adventure():
 
         if final_choice_index == 1:
             print_with_pause("Vous trouvez un groupe de survivants. Ensemble, vous augmentez vos chances de survie.")
+            print_with_pause("Le groupe vous informe qu'il existe une cache d'armes non loin d'ici.")
+            print_with_pause("Voulez-vous y aller?")
+            options_weapon_cache = ["Oui, allons à la cache d'armes", "Non, restons avec le groupe"]
+            weapon_cache_choice = make_choice("Votre choix ?", options_weapon_cache)
+
+            if weapon_cache_choice == 1:
+                print_with_pause("Vous atteignez la cache d'armes et trouvez des armes puissantes.")
+                print_with_pause("Votre groupe est maintenant mieux équipé pour affronter les zombies.")
+            elif weapon_cache_choice == 2:
+                print_with_pause("Vous restez avec le groupe. La survie continue avec de nouveaux défis.")
+            else:
+                print_with_pause("Choix non valide. Vous décidez de rester avec le groupe pour la survie.")
+
         elif final_choice_index == 2:
             print_with_pause("Vous découvrez un abri solide. C'est maintenant votre refuge sûr.")
+            print_with_pause("Vous avez le choix de renforcer les défenses de l'abri ou d'explorer les environs.")
+            options_shelter = ["Renforcer les défenses de l'abri", "Explorer les environs"]
+            shelter_choice = make_choice("Votre choix ?", options_shelter)
+
+            if shelter_choice == 1:
+                print_with_pause("En renforçant les défenses, vous repoussez avec succès une attaque zombie.")
+                print_with_pause("Votre abri devient plus sûr, mais de nouveaux défis vous attendent.")
+            elif shelter_choice == 2:
+                print_with_pause("En explorant les environs, vous découvrez une source d'eau potable.")
+                print_with_pause("Cela renforce vos réserves, mais soyez prêt pour de nouveaux dangers.")
+            else:
+                print_with_pause("Choix non valide. L'aventure continue avec de nouveaux défis.")
+
         elif final_choice_index == 3:
             print_with_pause("En explorant d'autres zones, vous découvrez des ressources précieuses pour votre survie.")
+            print_with_pause("Vous trouvez également des signes d'une communauté de survivants.")
+            print_with_pause("Voulez-vous les rejoindre?")
+            options_join_community = ["Oui, rejoignons la communauté", "Non, continuons en solitaire"]
+            join_community_choice = make_choice("Votre choix ?", options_join_community)
+
+            if join_community_choice == 1:
+                print_with_pause("Vous rejoignez la communauté et contribuez à sa prospérité.")
+                print_with_pause("Ensemble, vous avez de meilleures chances de reconstruire une société.")
+            elif join_community_choice == 2:
+                print_with_pause("Vous continuez en solitaire, bravant les dangers du monde post-apocalyptique.")
+                print_with_pause("Votre aventure individuelle vous réserve de nouveaux défis.")
+            else:
+                print_with_pause("Choix non valide. Vous prenez votre propre chemin dans ce monde dévasté.")
+
         else:
             print_with_pause("Choix non valide. Votre aventure continue avec de nouveaux défis.")
 
