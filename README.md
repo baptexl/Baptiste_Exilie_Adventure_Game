@@ -1,29 +1,26 @@
 # Baptiste_Exilie_Adventure_Game
-Jeu d'Aventure de Survie Zombie
 
-Description:
+## Zombie Survival Adventure Game
 
-Bienvenue dans ce jeu d'aventure textuel de survie zombie. 
-Vous êtes dans une école infestée de zombies et devez faire des choix stratégiques pour survivre. 
-Chaque décision peut être la différence entre la vie et la mort.
+### Description:
 
-Comment Jouer:
+Welcome to this text-based zombie survival adventure game. You find yourself trapped in a school overrun by zombies, where strategic decision-making is crucial for survival. Every choice you make could be the difference between life and death.
 
-Lancez le jeu en exécutant le fichier Python. 
-À chaque étape, vous aurez des choix à faire. 
-Entrez le numéro du choix et voyez comment l'histoire se déroule.
+### How to Play:
 
-Fonctionnalités:
+To play the game, execute the Python file. At each stage, you will be presented with choices. Enter the corresponding choice number and witness how the story unfolds.
 
-Choix multiples qui influencent l'issue de l'histoire.
-Scénarios variés offrant des rebondissements inattendus.
+### Features:
 
-Développement Futur:
+- Multiple choices that significantly impact the story's outcome.
+- Diverse scenarios offering unexpected and thrilling twists.
 
-Ajout de plus de scénarios et de choix.
-Implémentation d'un système de points de santé.
-Intégration de graphiques ASCII pour une meilleure immersion.
+### Future Development:
 
-Contributions:
+- Expansion of the game with additional scenarios and choices.
+- Implementation of a health points system to add depth to the gameplay.
+- Integration of ASCII graphics for a more immersive gaming experience.
 
-Les contributions sont les bienvenues. N'hésitez pas à forker le projet et à proposer vos améliorations par des pull requests.
+### Contributions:
+
+Contributions are highly encouraged! Feel free to fork the project and propose your enhancements through pull requests. Together, we can make this zombie adventure even more captivating and engaging.
