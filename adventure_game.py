@@ -15,6 +15,26 @@ def make_choice(question, options):
         else:
             print("Choix non valide. Veuillez entrer un numéro valide.")
 
+def explore_left_corridor():
+    print_with_pause("Vous trouvez une salle de classe sécurisée avec des provisions.")
+    print_with_pause("Vous entendez du bruit. Voulez-vous enquêter ?")
+
+    options_second_choice = ["Enquêter sur le bruit", "Rester caché et silencieux"]
+    second_choice_index = make_choice("Votre choix ?", options_second_choice)
+
+    if second_choice_index == 1:
+        print_with_pause("C'était un autre survivant ! Vous avez maintenant un allié.")
+    elif second_choice_index == 2:
+        print_with_pause("Vous restez en sécurité mais seul. La survie continue.")
+    else:
+        print_with_pause("Choix non valide. Les zombies vous surprennent. Vous perdez des points de vie.")
+        return 30  # Perte de points de vie en cas de choix invalide
+    return 0
+
+def run_right_corridor():
+    print_with_pause("Malheureusement, vous tombez sur un groupe de zombies ! Vous perdez des points de vie.")
+    return 50  # Perte de points de vie en cas de rencontre avec des zombies
+
 def zombie_adventure():
     print_with_pause("Bienvenue dans l'aventure de survie zombie !")
     print_with_pause("Vous êtes dans une école infestée de zombies. Deux couloirs s'offrent à vous.")
@@ -25,23 +45,11 @@ def zombie_adventure():
     health = 100  # Points de vie initiaux
 
     if choice_index == 1:
-        print_with_pause("Vous trouvez une salle de classe sécurisée avec des provisions.")
-        print_with_pause("Vous entendez du bruit. Voulez-vous enquêter ?")
-
-        options_second_choice = ["Enquêter sur le bruit", "Rester caché et silencieux"]
-        second_choice_index = make_choice("Votre choix ?", options_second_choice)
-
-        if second_choice_index == 1:
-            print_with_pause("C'était un autre survivant ! Vous avez maintenant un allié.")
-        elif second_choice_index == 2:
-            print_with_pause("Vous restez en sécurité mais seul. La survie continue.")
-        else:
-            print_with_pause("Choix non valide. Les zombies vous surprennent. Vous perdez des points de vie.")
-            health -= 30  # Perte de points de vie en cas de choix invalide
+        health -= explore_left_corridor()
 
     elif choice_index == 2:
-        print_with_pause("Malheureusement, vous tombez sur un groupe de zombies ! Vous perdez des points de vie.")
-        health -= 50  # Perte de points de vie en cas de rencontre avec des zombies
+        health -= run_right_corridor()
+
     else:
         print_with_pause("Choix non valide. Les zombies vous attrapent. Fin de l'aventure.")
         return
